@@ -54,7 +54,7 @@ y = iris.target
 print(f"Dataset shape: {X.shape}")    
 print("Classes:", iris.target_names)    
 
-# Split the data into training and testing sets (80:20 ratio)  
+\# Split the data into training and testing sets (80:20 ratio)  
 X_train, X_test, y_train, y_test = train_test_split(  
     X, y, test_size=0.2, random_state=42  
 )  
