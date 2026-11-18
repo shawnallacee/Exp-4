@@ -45,7 +45,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler    
 from sklearn.svm import SVC  
 
-# Load the Iris dataset and select the first two features for visualization  
+\# Load the Iris dataset and select the first two features for visualization  
 print("--- Dataset Initialization ---")  
 iris = load_iris()  
 X = iris.data[:, :2]  # Using first two features (sepal length and sepal width)  
@@ -61,12 +61,12 @@ X_train, X_test, y_train, y_test = train_test_split(
 print(f"Training set size: {X_train.shape[0]} samples")  
 print(f"Test set size: {X_test.shape[0]} samples")  
 
-# Standardize features using StandardScaler  
+\# Standardize features using StandardScaler  
 scaler = StandardScaler()  
 X_train_scaled = scaler.fit_transform(X_train)  
 X_test_scaled = scaler.transform(X_test)  
 
-# Train an SVM classifier with a linear kernel  
+\# Train an SVM classifier with a linear kernel  
 print("\n--- Linear Kernel SVM Training & Evaluation ---")  
 linear_svm = SVC(kernel="linear", C=1.0, random_state=42)  
 linear_svm.fit(X_train_scaled, y_train)    
@@ -75,7 +75,7 @@ acc_linear = accuracy_score(y_test, y_pred_linear)
 print(f"Linear Kernel Accuracy: {acc_linear:.4f}")    
 print("Classification Report (Linear):\n", classification_report(y_test, y_pred_linear))  
   
-# Train an SVM classifier with the RBF kernel  
+\# Train an SVM classifier with the RBF kernel  
 print("\n--- RBF Kernel SVM Training & Evaluation ---")    
 rbf_svm = SVC(kernel="rbf", C=1.0, gamma="scale", random_state=42)  
 rbf_svm.fit(X_train_scaled, y_train)          
@@ -84,7 +84,7 @@ acc_rbf = accuracy_score(y_test, y_pred_rbf)
 print(f"RBF Kernel Accuracy: {acc_rbf:.4f}")  
 print("Classification Report (RBF):\n", classification_report(y_test, y_pred_rbf))  
 
-# Plot the decision boundaries for both models    
+\# Plot the decision boundaries for both models    
 print("\n--- Generating Decision Boundary Plots ---")  
 fig, axes = plt.subplots(1, 2, figsize=(14, 6))  
 
